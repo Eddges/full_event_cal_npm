@@ -2,7 +2,7 @@ interface EventObjectInterface {
     [key: string]: string;
 }
 
-const fullCalendar = (events: { [key: string]: EventObjectInterface }) => {
+const fullCalendar = (events: { [key: string]: EventObjectInterface } | null) => {
     const dayArray: string[] = [
         "January",
         "February",

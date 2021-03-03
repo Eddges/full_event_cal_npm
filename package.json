@@ -1,6 +1,6 @@
 {
   "name": "full_event_cal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An easy-to-use event calendar written in typescript",
   "main": "index.js",
   "scripts": {

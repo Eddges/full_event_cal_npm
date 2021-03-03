@@ -127,3 +127,4 @@ var fullCalendar = function (events, styles) {
         });
     }
 };
+module.exports = fullCalendar;

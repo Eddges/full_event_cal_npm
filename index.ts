@@ -196,3 +196,6 @@ const fullCalendar = (events: { [key: string]: EventObjectInterface } | null, st
         });
     }
 };
+
+
+export = fullCalendar

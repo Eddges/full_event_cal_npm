@@ -1,0 +1,19 @@
+{
+  "name": "full_event_cal",
+  "version": "1.0.0",
+  "description": "An easy-to-use event calendar written in typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eddges/full_event_cal_npm.git"
+  },
+  "author": "Shivam Shekhar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eddges/full_event_cal_npm/issues"
+  },
+  "homepage": "https://github.com/Eddges/full_event_cal_npm#readme"
+}

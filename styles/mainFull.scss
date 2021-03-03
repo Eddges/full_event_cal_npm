@@ -35,7 +35,7 @@ $torq : #80ffdb;
         display: flex;
         justify-content: space-between;
         background-color: $violet;
-        i{
+        #prevMonth, #nextMonth{
             display : flex;
             align-items: center;
             &:hover{

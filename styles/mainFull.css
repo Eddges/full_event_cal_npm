@@ -22,7 +22,7 @@
   background-color: #6930c3;
 }
 
-.full-calendar .Top i {
+.full-calendar .Top #prevMonth, .full-calendar .Top #nextMonth {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,7 +31,7 @@
           align-items: center;
 }
 
-.full-calendar .Top i:hover {
+.full-calendar .Top #prevMonth:hover, .full-calendar .Top #nextMonth:hover {
   cursor: pointer;
 }
 

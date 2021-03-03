@@ -19,11 +19,12 @@ const fullCalendar = (events: { [key: string]: EventObjectInterface }) => {
     ];
 
     const eventsArray: { [key: string]: EventObjectInterface } = {};
-    Object.keys(events).forEach((iterator) => {
-        console.log("iterator: ", iterator);
-        const newKey: string = new Date(iterator).toDateString();
-        eventsArray[newKey] = events[iterator];
-    });
+    if (events) {
+        Object.keys(events).forEach((iterator) => {
+            const newKey: string = new Date(iterator).toDateString();
+            eventsArray[newKey] = events[iterator];
+        });
+    }
 
     const head = document.getElementsByTagName("HEAD")[0];
     const link = document.createElement("link");
@@ -39,13 +40,13 @@ const fullCalendar = (events: { [key: string]: EventObjectInterface }) => {
     if (containerDiv) {
         containerDiv.innerHTML = `
             <div class="Top">
-                <i id="prevMonth" class="fas fa-chevron-left"></i>
+                <span id="prevMonth">&lt;</span>
                 <div class="DivCurrent">
                     <span class="MonthName"></span>
                     <span class="CurrentDate"></span>
                 </div>
 
-                <i id="nextMonth" class="fas fa-chevron-right"></i>
+                <span id="nextMonth">&gt;</span>
             </div>
             <div class="Labels">
                 <span class="Label">Sun</span>

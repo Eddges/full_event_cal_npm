@@ -15,11 +15,12 @@ var fullCalendar = function (events) {
         "December",
     ];
     var eventsArray = {};
-    Object.keys(events).forEach(function (iterator) {
-        console.log("iterator: ", iterator);
-        var newKey = new Date(iterator).toDateString();
-        eventsArray[newKey] = events[iterator];
-    });
+    if (events) {
+        Object.keys(events).forEach(function (iterator) {
+            var newKey = new Date(iterator).toDateString();
+            eventsArray[newKey] = events[iterator];
+        });
+    }
     var head = document.getElementsByTagName("HEAD")[0];
     var link = document.createElement("link");
     link.rel = "stylesheet";
@@ -28,7 +29,7 @@ var fullCalendar = function (events) {
     head.appendChild(link);
     var containerDiv = document.querySelector(".full-calendar");
     if (containerDiv) {
-        containerDiv.innerHTML = "\n            <div class=\"Top\">\n                <i id=\"prevMonth\" class=\"fas fa-chevron-left\"></i>\n                <div class=\"DivCurrent\">\n                    <span class=\"MonthName\"></span>\n                    <span class=\"CurrentDate\"></span>\n                </div>\n\n                <i id=\"nextMonth\" class=\"fas fa-chevron-right\"></i>\n            </div>\n            <div class=\"Labels\">\n                <span class=\"Label\">Sun</span>\n                <span class=\"Label\">Mon</span>\n                <span class=\"Label\">Tue</span>\n                <span class=\"Label\">Wed</span>\n                <span class=\"Label\">Thu</span>\n                <span class=\"Label\">Fri</span>\n                <span class=\"Label\">Sat</span>\n            </div>\n            <div class=\"Dates\"></div>\n            ";
+        containerDiv.innerHTML = "\n            <div class=\"Top\">\n                <span id=\"prevMonth\">&lt;</span>\n                <div class=\"DivCurrent\">\n                    <span class=\"MonthName\"></span>\n                    <span class=\"CurrentDate\"></span>\n                </div>\n\n                <span id=\"nextMonth\">&gt;</span>\n            </div>\n            <div class=\"Labels\">\n                <span class=\"Label\">Sun</span>\n                <span class=\"Label\">Mon</span>\n                <span class=\"Label\">Tue</span>\n                <span class=\"Label\">Wed</span>\n                <span class=\"Label\">Thu</span>\n                <span class=\"Label\">Fri</span>\n                <span class=\"Label\">Sat</span>\n            </div>\n            <div class=\"Dates\"></div>\n            ";
     }
     var renderCalendar = function (contextMonth, contextYear) {
         var monthNameElement = document.querySelector(".MonthName");

@@ -1,5 +1,5 @@
 "use strict";
-var fullCalendar = function (eventsArray) {
+var fullCalendar = function (events) {
     var dayArray = [
         'January',
         'February',
@@ -14,7 +14,16 @@ var fullCalendar = function (eventsArray) {
         'November',
         'December'
     ];
-    console.log('Initialised');
+    var eventsArray = {};
+    Object.keys(events).forEach(function (iterator) {
+        console.log('iterator: ', iterator);
+        var newKey = new Date(iterator).toDateString();
+        eventsArray[newKey] = events[iterator];
+    });
+    console.log('eventsArray: ', eventsArray);
+    // interface DateObjectInterface {
+    //     date : EventObjectInterface[]
+    // }
     // const eventsArray : {[key : string] : EventObjectInterface } = {}
     // eventsArray[(new Date('Jan 26 2021')).toDateString()] = {
     //     'red' : "Mom's Birthday",

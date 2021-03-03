@@ -2,7 +2,7 @@ interface EventObjectInterface {
     [key : string] : string
 }
 
-const fullCalendar = (eventsArray: { [key: string]:  EventObjectInterface}) => {
+const fullCalendar = (events: { [key: string]:  EventObjectInterface}) => {
 
     const dayArray : string[] = [
         'January',
@@ -19,12 +19,19 @@ const fullCalendar = (eventsArray: { [key: string]:  EventObjectInterface}) => {
         'December'
     ]
 
-    console.log('Initialised')
+    const eventsArray: { [key: string]: EventObjectInterface } = {}
+    Object.keys(events).forEach(iterator => {
+        console.log('iterator: ', iterator)
+        const newKey: string = new Date(iterator).toDateString()
+        eventsArray[newKey] = events[iterator]
+    })
+
+    console.log('eventsArray: ', eventsArray)
     
     
-    interface DateObjectInterface {
-        date : EventObjectInterface[]
-    }
+    // interface DateObjectInterface {
+    //     date : EventObjectInterface[]
+    // }
     
     // const eventsArray : {[key : string] : EventObjectInterface } = {}
     

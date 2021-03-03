@@ -1,0 +1,260 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: #252525;
+  background-color: #6930c3;
+}
+
+::selection {
+  color: #252525;
+  background-color: #6930c3;
+}
+
+body {
+  width: 100%;
+  background-color: #252525;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #eee;
+  padding-bottom: 100px;
+}
+
+.Intro {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  height: 80vh;
+}
+
+.Intro .IntroLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Intro .IntroLeft .IntroTitle {
+  font-size: 6rem;
+  font-weight: 900;
+  padding-top: 20px;
+}
+
+.Intro .IntroLeft .IntroDescription {
+  font-size: 1rem;
+  padding: 0px 20px;
+  color: #aaa;
+  font-family: 'Roboto Condensed';
+}
+
+.Container {
+  width: 80%;
+  -webkit-box-shadow: -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
+          box-shadow: -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
+}
+
+.Container .Top {
+  width: 100%;
+  padding: 24px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #6930c3;
+}
+
+.Container .Top i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Top i:hover {
+  cursor: pointer;
+}
+
+.Container .Top .DivCurrent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Container .Top .DivCurrent .MonthName {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.Container .Top .DivCurrent .CurrentDate {
+  padding: 5px 0px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.Container .Labels {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  padding: 20px 0px 5px 0px;
+}
+
+.Container .Labels .Label {
+  text-align: center;
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.Container .Dates {
+  padding: 16px 0px;
+  font-size: 0.8rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  font-weight: 600;
+}
+
+.Container .Dates .Date {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: solid 1px transparent;
+  padding: 32px;
+}
+
+.Container .Dates .Date:hover {
+  border: 1px solid #6930c3;
+  cursor: pointer;
+}
+
+.Container .Dates .Date .Number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Dates .Date .Events {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Container .Dates .Date .Events .EventsElement {
+  margin-top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 5px;
+  margin: 4px 2px 0px 2px;
+}
+
+.Container .Dates .Date .Events .EventsElement:hover {
+  cursor: pointer;
+  background-color: white;
+}
+
+.Container .Dates .Date .Events .Hover {
+  position: absolute;
+  -webkit-transform: translateY(-54px);
+          transform: translateY(-54px);
+  padding: 8px 5px;
+  background-color: white;
+  color: #252525;
+}
+
+.Container .Dates .Date .Events .Red {
+  background-color: #ff0059;
+}
+
+.Container .Dates .Date .Events .Green {
+  background-color: #24ff10;
+}
+
+.Container .Dates .Date .Events .Blue {
+  background-color: #1e80ff;
+}
+
+.Container .Dates .PrevDate, .Container .Dates .NextDate {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: solid 1px transparent;
+  padding: 32px;
+  color: #666;
+}
+
+.Container .Dates .Active {
+  background-color: #6930c3;
+}
+
+.NoDisplay {
+  display: none;
+}
+/*# sourceMappingURL=mainFull.css.map */

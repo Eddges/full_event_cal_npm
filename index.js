@@ -41,16 +41,21 @@ var fullCalendar = function (events) {
     //     'red' : "Appointment"
     // }
     var renderCalendar = function (contextMonth, contextYear) {
+        var containerDiv = document.querySelector('.full-calendar');
+        if (containerDiv) {
+            containerDiv.innerHTML = "\n                <div class=\"Top\">\n                    <i id=\"prevMonth\" class=\"fas fa-chevron-left\"></i>\n                    <div class=\"DivCurrent\">\n                        <span class=\"MonthName\"></span>\n                        <span class=\"CurrentDate\"></span>\n                    </div>\n\n                    <i id=\"nextMonth\" class=\"fas fa-chevron-right\"></i>\n                </div>\n                <div class=\"Labels\">\n                    <span class=\"Label\">Sun</span>\n                    <span class=\"Label\">Mon</span>\n                    <span class=\"Label\">Tue</span>\n                    <span class=\"Label\">Wed</span>\n                    <span class=\"Label\">Thu</span>\n                    <span class=\"Label\">Fri</span>\n                    <span class=\"Label\">Sat</span>\n                </div>\n                <div class=\"Dates\"></div>\n                ";
+        }
         var monthNameElement = document.querySelector('.MonthName');
         var currentDateElement = document.querySelector('.CurrentDate');
         var datesElement = document.querySelector('.Dates');
+        console.log('ContainerDiv: ', containerDiv);
         var contextDate = new Date();
         contextDate.setMonth(contextMonth);
         contextDate.setFullYear(contextYear);
         var firstDayOfThisMonth = new Date(contextYear, contextDate.getMonth(), 1);
         var lastDayOfThisMonth = new Date(contextYear, contextDate.getMonth() + 1, 0);
         var startDayOfCurrentMonth = firstDayOfThisMonth.getDay();
-        console.log('Current Day of the week: ', startDayOfCurrentMonth);
+        // console.log('Current Day of the week: ', startDayOfCurrentMonth)
         var lastDateOfPrevMonth = new Date(2021, contextDate.getMonth(), 0).getDate();
         if (monthNameElement) {
             monthNameElement.innerHTML = dayArray[contextMonth] + (" " + contextYear);

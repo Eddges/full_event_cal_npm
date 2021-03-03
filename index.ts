@@ -25,62 +25,34 @@ const fullCalendar = (events: { [key: string]:  EventObjectInterface}) => {
         const newKey: string = new Date(iterator).toDateString()
         eventsArray[newKey] = events[iterator]
     })
+    
+    const containerDiv = document.querySelector('.full-calendar')
 
-    console.log('eventsArray: ', eventsArray)
-    
-    
-    // interface DateObjectInterface {
-    //     date : EventObjectInterface[]
-    // }
-    
-    // const eventsArray : {[key : string] : EventObjectInterface } = {}
-    
-    // eventsArray[(new Date('Jan 26 2021')).toDateString()] = {
-    //     'red' : "Mom's Birthday",
-    //     'blue' : "Grocery Shopping",
-    // }
-    
-    // eventsArray['Wed Jan 27 2021'] = {
-    //     'green' : "Say Hello to Mr. Spiderman",
-    //     'blue' : "Assassinate 5 mosquitoes",
-    // }
-    
-    // eventsArray['Tue Feb 23 2021'] = {
-    //     'blue' : "Shivam Shekhar's Budday"
-    // }
-    
-    // eventsArray['Thu Jan 28 2021'] = {
-    //     'green' : "Demo",
-    //     'red' : "Appointment"
-    // }
+    if (containerDiv) {
+        containerDiv.innerHTML = `
+            <div class="Top">
+                <i id="prevMonth" class="fas fa-chevron-left"></i>
+                <div class="DivCurrent">
+                    <span class="MonthName"></span>
+                    <span class="CurrentDate"></span>
+                </div>
+
+                <i id="nextMonth" class="fas fa-chevron-right"></i>
+            </div>
+            <div class="Labels">
+                <span class="Label">Sun</span>
+                <span class="Label">Mon</span>
+                <span class="Label">Tue</span>
+                <span class="Label">Wed</span>
+                <span class="Label">Thu</span>
+                <span class="Label">Fri</span>
+                <span class="Label">Sat</span>
+            </div>
+            <div class="Dates"></div>
+            `
+    }
     
     const renderCalendar: (contextMonth : number, contextYear : number) => void = (contextMonth, contextYear) => {
-    
-        const containerDiv = document.querySelector('.full-calendar')
-
-        if (containerDiv) {
-            containerDiv.innerHTML = `
-                <div class="Top">
-                    <i id="prevMonth" class="fas fa-chevron-left"></i>
-                    <div class="DivCurrent">
-                        <span class="MonthName"></span>
-                        <span class="CurrentDate"></span>
-                    </div>
-
-                    <i id="nextMonth" class="fas fa-chevron-right"></i>
-                </div>
-                <div class="Labels">
-                    <span class="Label">Sun</span>
-                    <span class="Label">Mon</span>
-                    <span class="Label">Tue</span>
-                    <span class="Label">Wed</span>
-                    <span class="Label">Thu</span>
-                    <span class="Label">Fri</span>
-                    <span class="Label">Sat</span>
-                </div>
-                <div class="Dates"></div>
-                `
-        }
 
         const monthNameElement = document.querySelector('.MonthName')
         const currentDateElement = document.querySelector('.CurrentDate')
@@ -97,7 +69,6 @@ const fullCalendar = (events: { [key: string]:  EventObjectInterface}) => {
         const lastDayOfThisMonth : Date = new Date(contextYear, contextDate.getMonth() + 1, 0)
     
         const startDayOfCurrentMonth : number = firstDayOfThisMonth.getDay()
-        // console.log('Current Day of the week: ', startDayOfCurrentMonth)
         const lastDateOfPrevMonth : number = new Date(2021, contextDate.getMonth(), 0).getDate()
     
         if(monthNameElement) {

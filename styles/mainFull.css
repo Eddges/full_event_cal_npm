@@ -1,77 +1,13 @@
-* {
+.full-calendar {
+  font-family: 'Source Sans Pro', sans-serif;
+  width: 80%;
+}
+
+.full-calendar * {
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-::-moz-selection {
-  color: #252525;
-  background-color: #6930c3;
-}
-
-::selection {
-  color: #252525;
-  background-color: #6930c3;
-}
-
-body {
-  width: 100%;
-  background-color: #252525;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Source Sans Pro', sans-serif;
-  color: #eee;
-  padding-bottom: 100px;
-}
-
-.Intro {
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 20px;
-  height: 80vh;
-}
-
-.Intro .IntroLeft {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.Intro .IntroLeft .IntroTitle {
-  font-size: 6rem;
-  font-weight: 900;
-  padding-top: 20px;
-}
-
-.Intro .IntroLeft .IntroDescription {
-  font-size: 1rem;
-  padding: 0px 20px;
-  color: #aaa;
-  font-family: 'Roboto Condensed';
-}
-
-.full-calendar {
-  width: 80%;
-  -webkit-box-shadow: -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
-          box-shadow: -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
 }
 
 .full-calendar .Top {

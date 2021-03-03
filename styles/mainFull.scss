@@ -3,54 +3,32 @@ $violet : #6930c3;
 $indigo : #64dfdf;
 $torq : #80ffdb;
 
-*{
-    margin : 0px;
-    padding : 0px;
-    box-sizing: border-box;
-}
+// *{
+//     margin : 0px;
+//     padding : 0px;
+//     box-sizing: border-box;
+// }
 
-::selection{
-    color : $dark;
-    background-color: $violet;
-}
-
-body{
-    width : 100%;
-    background-color: $dark;
-    display : flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: 'Source Sans Pro', sans-serif;
-    color : #eee;
-    padding-bottom : 100px;
-}
-
-.Intro{
-    width : 80%;
-    display : flex;
-    align-items: center;
-    margin-top : 20px;
-    height : 80vh;
-    .IntroLeft{
-        display : flex;
-        flex-direction: column;
-        .IntroTitle{
-            font-size : 6rem;
-            font-weight: 900;
-            padding-top : 20px;
-        }
-        .IntroDescription{
-            font-size : 1rem;
-            padding : 0px 20px;
-            color : #aaa;
-            font-family: 'Roboto Condensed';
-        }
-    }
-}
+// body{
+//     width : 100%;
+//     background-color: $dark;
+//     display : flex;
+//     flex-direction: column;
+//     align-items: center;
+//     font-family: 'Source Sans Pro', sans-serif;
+//     color : #eee;
+//     padding-bottom : 100px;
+// }
 
 .full-calendar{
+    font-family: 'Source Sans Pro', sans-serif;
     width : 80%;
-    box-shadow:  -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    // box-shadow:  -12px -12px 15px #1f1f1f, 12px 12px 15px #2b2b2b;
     .Top{
         width : 100%;
         padding : 24px 40px;

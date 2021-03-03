@@ -1,5 +1,5 @@
 "use strict";
-var fullCalendar = function (events) {
+var fullCalendar = function (events, styles) {
     var dayArray = [
         "January",
         "February",

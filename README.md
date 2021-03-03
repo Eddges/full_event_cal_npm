@@ -14,7 +14,7 @@ Upto 3 color coded events can be added for each day (more will be added in the f
 
 > The package looks for the first container with the class name *full-calendar* and renders the calendar within it
 
-### XHTML/View file
+### XHTML / View file
 
 ```
     <div class='full-calendar' ></div>
@@ -22,11 +22,11 @@ Upto 3 color coded events can be added for each day (more will be added in the f
 
 ### Script
 
+> *Make sure that you have properly imported the package using a JS bundler like Webpack or Parcel*
+
 ```
     fullCalendar()
 ```
-
-> *Make sure that you have properly imported the package using a JS bundler like Webpack or Parcel*
 
 # Options
 
@@ -43,6 +43,8 @@ Upto 3 color coded events can be added for each day (more will be added in the f
         },
     };
 
+
+
     fullCalendar(eventsObject);
 ```
 
@@ -53,5 +55,8 @@ Upto 3 color coded events can be added for each day (more will be added in the f
         backgroundColor: '#eee',
         accent: '#eee'
     }
+
+
+    
     fullCalendar(eventsObject, styles);
 ```
